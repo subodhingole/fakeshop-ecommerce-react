@@ -1,13 +1,317 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 1rem 5rem;
+  background-color: #dadcdc;
+}
+
+.border {
+  border: 1px solid #000;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.home {
+  display: inline;
+  justify-content: start;
+  align-items: stretch;
+  border-radius: 25rem;
+  border: none;
+  margin-left: 10rem;
+  margin-top: 10rem;
+}
+
+.styling {
+  width: 50rem;
+}
+
+.one {
+  animation-name: fadeInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+
+.two {
+  animation-name: fadeInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+}
+
+.three {
+  animation-name: fadeInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+
+.home__text {
+  font-size: 8rem;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  height: 60px;
+  border-bottom: 2px solid #979797;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav__title {
+  font-size: 3rem;
+  color: #000;
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.nav__link {
+  font-size: 2rem;
+  color: #000;
+  display: inline;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.card {
+  margin: 2rem 0rem;
+  padding: 2rem;
+  height: 50rem;
+  width: 30rem;
+  display: inline-block;
+  position: relative;
+}
+
+.card--image {
+  width: 100%;
+  height: 25rem;
+  background-size: cover;
+}
+
+.card__text{
+  max-lines: 2;
+}
+.card__title {
+  font-size: 2rem;
+  color: #000;
+}
+
+.card__info {
+  margin-top: 2rem;
+}
+
+.card__price {
+  font-size: 2rem;
+  margin-top: auto;
+  color: green;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.desc {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+
+.desc__img {
+  width: 40rem;
+  height: 60rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.desc__img img {
+  width: 40rem;
+  height: 40rem;
+  background-color: #fff;
+}
+
+.desc__info--rating {
+  font-size: 3rem;
+  color: grey;
+  display: inline;
+  margin-left: 2rem;
+}
+
+.certified {
+  font-size: 1rem;
+  display: inline-block;
+  width: fit-content;
+  margin: 1rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
+  color: white;
+  background-color: darkgrey;
+  border-radius: 5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.desc__info {
+  margin-left: 2rem;
+  padding: 2rem;
+  height: 60rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.desc__info--title {
+  margin-top: 2rem;
+  font-size: 8rem;
+  color: #000;
+}
+
+.desc__info--button {
+  font-size: 2rem;
+  color: #000;
+  text-decoration: none;
+  margin-right: 2rem;
+  margin-top: 3rem;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  border: grey;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.desc__info--text {
+  font-size: 2rem;
+  color: #000;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+
+.desc__img--price {
+  font-size: 5rem;
+  color: #118c4f;
+  font-family: Pacifico;
+  margin-left: 2rem;
+}
+
+.about {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.about__title {
+  font-size: 6rem;
+  color: #000;
+  text-decoration: dotted underline;
+
+  animation: fadeInFromLeft 1s ease-out backwards;
+}
+
+.about__text {
+  font-size: 2rem;
+  color: #000;
+  margin-top: 2rem;
+}
+
+.firstWord {
+  margin-left: 10rem;
+}
+
+.taxes {
+  font-size: 2rem;
+  display: inline-block;
+  width: fit-content;
+  margin: 1rem;
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  80% {
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+  80% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-27rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(27rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
